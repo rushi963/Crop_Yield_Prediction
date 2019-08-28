@@ -1,0 +1,46 @@
+- - - - - - Team Members and IDs:- - - - - - - - 
+
+Rushikesh Nalla - 111971011
+Purvik Shah - 112045155
+Sriram Gattu - 112007687
+Kaustubh Sivalenka - 111987216
+
+- - - - - - Data:- - - - - - - - 
+
+https://drive.google.com/drive/folders/1-Uj1ENTkSoietqeSS-B1FhUsQAgS2Vk9 - tif_zoom_output folder
+This folder contains actual satellite images in .tif format 
+
+https://drive.google.com/drive/folders/1TEuHYI6pL_TaV0TgZzkh_QgN1zVuvAYt - zoom_output folder
+This folder contains .npy files
+
+https://drive.google.com/file/d/1DfMBND_fHW6ZkjXWOw8aSOXbwP2KHdOF - contains yield.csv file
+yield.csv - this file contains yield data. (year, stateID, countyID, crop_yield)
+
+trainingdata.txt is the data generated and used to train the Deep learning models from .npy files.
+
+- - - - - - Python files:- - - - - - - 
+
+histogram.py - takes .npy files and creates training data (Python 2.7)
+ridge_regression.py - Regression Model (Python 3.5)
+permutationtest.py -  Permutation testing for Regression Model results (Python 3.5)
+tf_lstm.py - LSTM Model and Permutation testing for its results (Python 3.5)
+
+- - - - - - - Type of System used:- - - - - - - 
+
+NVIDIA DGX-1 was used for computational requirements.
+
+A Singularity image was built and was mounted to the working directory (on DGX-1) to use the requisite
+software libraries to realize  project objectives.
+
+https://drive.google.com/file/d/1WATPH8xna_xSQyvWrnMhAdm98rwYC5-L contains the singularity image
+tf_writable.simg - Singularity image mounted to working directory.
+
+- - - - - - - Data Frameworks and their use:- - - - - - - 
+
+Spark - used in histogram.py
+Tensorflow - used in tf_lstm.py
+
+- - - - - - - Data Concepts and their use:- - - - - - - 
+
+Ridge regression - used in ridge_regression.py
+Hypothesis testing - used in permutationtest.py, tf_lstm.py
